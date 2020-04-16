@@ -1,5 +1,5 @@
-import React from "react";
-// when we useContext we need to tell it which context we want to use
+import React, { useContext } from "react";
+//when we useContext we need to tell it which context we want to use
 import { ProductContext } from "../contexts/ProductContext";
 
 // Components
@@ -7,6 +7,7 @@ import Product from "./Product";
 
 const Products = () => {
   const { products, addItem } = useContext(ProductContext);
+
   return (
     <div className="products-container">
       {products.map((product) => (
